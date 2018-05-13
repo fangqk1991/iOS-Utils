@@ -99,11 +99,49 @@
                     <navigationItem key="navigationItem" title="Master" id="rHa-h1-TPd"/>
                     <connections>
                         <segue destination="2AA-jq-yj1" kind="show" id="1O7-hg-of5"/>
+                        <segue destination="xP3-Hq-kcR" kind="show" id="MKO-1Z-b46"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u4W-hS-ITA" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="709" y="-630"/>
+        </scene>
+        <!--DialogListVC-->
+        <scene sceneID="Q5j-Pe-62A">
+            <objects>
+                <viewController storyboardIdentifier="sb_DialogListVC" title="DialogListVC" id="xP3-Hq-kcR" customClass="DialogListVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2SN-DP-ytB"/>
+                        <viewControllerLayoutGuide type="bottom" id="bvH-dB-d6i"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Mue-KC-SSs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PHL-V4-Vxr">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="xP3-Hq-kcR" id="PD1-AT-W28"/>
+                                    <outlet property="delegate" destination="xP3-Hq-kcR" id="nhK-hw-RfR"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PHL-V4-Vxr" firstAttribute="top" secondItem="Mue-KC-SSs" secondAttribute="top" id="RSo-ez-0RF"/>
+                            <constraint firstAttribute="trailing" secondItem="PHL-V4-Vxr" secondAttribute="trailing" id="dKg-qg-Rcc"/>
+                            <constraint firstItem="PHL-V4-Vxr" firstAttribute="leading" secondItem="Mue-KC-SSs" secondAttribute="leading" id="jIn-P3-q2t"/>
+                            <constraint firstAttribute="bottom" secondItem="PHL-V4-Vxr" secondAttribute="bottom" id="xYB-iR-Cwo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="PHL-V4-Vxr" id="orb-jg-hLV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J8L-Zf-fOU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="724" y="214"/>
         </scene>
     </scenes>
 </document>

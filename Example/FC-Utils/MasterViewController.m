@@ -7,8 +7,8 @@
 //
 
 #import "MasterViewController.h"
-#import "FCDialog.h"
 #import "Master_FCVC.h"
+#import "DialogListVC.h"
 
 @interface MasterViewController ()
 
@@ -32,7 +32,7 @@
                        },
                    @{
                        @"text": @"FCDialog",
-                       @"event": ^{ [FCDialog showSingleTextInputDialogInView:weakSelf title:@"FCDialog" submit:nil]; }
+                       @"event": ^{ [DialogListVC fc_pushToNavigation:weakSelf.navigationController]; }
                        },
                    ],
                ];
