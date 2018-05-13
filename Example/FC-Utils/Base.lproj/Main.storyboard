@@ -25,10 +25,10 @@
             </objects>
             <point key="canvasLocation" x="-350" y="-613"/>
         </scene>
-        <!--MasterFCVC-->
+        <!--Master_FCVC-->
         <scene sceneID="Rgf-jx-sU7">
             <objects>
-                <viewController storyboardIdentifier="sb_Master_FCVC" id="2AA-jq-yj1" customClass="Master_FCVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="sb_Master_FCVC" title="Master_FCVC" id="2AA-jq-yj1" customClass="Master_FCVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Tip-25-Ed3"/>
                         <viewControllerLayoutGuide type="bottom" id="CBO-08-FrZ"/>
@@ -36,8 +36,27 @@
                     <view key="view" contentMode="scaleToFill" id="4HG-5Q-DCh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5y7-D4-gn4">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="2AA-jq-yj1" id="8am-wB-bKe"/>
+                                    <outlet property="delegate" destination="2AA-jq-yj1" id="DKl-MP-d1m"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5y7-D4-gn4" firstAttribute="leading" secondItem="4HG-5Q-DCh" secondAttribute="leading" id="ArE-bx-pFQ"/>
+                            <constraint firstAttribute="trailing" secondItem="5y7-D4-gn4" secondAttribute="trailing" id="BMC-f7-eoH"/>
+                            <constraint firstItem="5y7-D4-gn4" firstAttribute="top" secondItem="4HG-5Q-DCh" secondAttribute="top" id="JP5-0v-cnh"/>
+                            <constraint firstAttribute="bottom" secondItem="5y7-D4-gn4" secondAttribute="bottom" id="rpc-gV-kCg"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="5y7-D4-gn4" id="vJr-H5-aP3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J43-JD-Xkb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
