@@ -7,7 +7,7 @@
 //
 
 #import "FCViewController.h"
-#import "FQKDialog.h"
+#import "FCDialog.h"
 
 @interface FCViewController ()
 
@@ -26,7 +26,7 @@
 {
     [super viewDidAppear:animated];
     
-//    [FQKDialog showSingleNumberInputDialogInView:self title:@"hehe" submit:^(NSString *text) {
+//    [FCDialog showSingleNumberInputDialogInView:self title:@"hehe" submit:^(NSString *text) {
 //
 //    }];
 }

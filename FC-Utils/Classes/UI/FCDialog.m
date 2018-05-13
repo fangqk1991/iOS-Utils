@@ -1,13 +1,13 @@
 //
-//  FQKDialog.m
+//  FCDialog.m
 //  FC-Utils
 //
 //  Created by fang on 2018/5/13.
 //
 
-#import "FQKDialog.h"
+#import "FCDialog.h"
 
-@implementation FQKDialog
+@implementation FCDialog
 
 + (UIAlertController *)showSingleTextInputDialogInView:(UIViewController *)viewController title:(NSString *)title submit:(void(^)(NSString *text))block
 {
