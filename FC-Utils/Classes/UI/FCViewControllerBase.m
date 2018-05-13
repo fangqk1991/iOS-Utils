@@ -32,22 +32,33 @@
 
 + (instancetype)fc_createViewController
 {
-    return [self fc_createViewController:nil];
+    NSString *nibName = NSStringFromClass([self class]);
+    
+    if([[NSBundle mainBundle] pathForResource:nibName ofType:@"nib"] != nil)
+    {
+        return [[[self class] alloc] initWithNibName:nibName bundle:nil];
+    }
+    
+    @try {
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        FCViewControllerBase *vc = [storyboard instantiateViewControllerWithIdentifier:[NSString stringWithFormat:@"sb_%@", nibName]];
+        return vc;
+    }
+    @catch (NSException *exception) {
+        NSLog(@"Neither %@ nib nor sb_%@ in Main.storyboard exists", nibName, nibName);
+    }
+          
+    return nil;
 }
 
 + (instancetype)fc_createViewController:(id)object
 {
-    NSString *nibName = NSStringFromClass([self class]);
-    if([[NSBundle mainBundle] pathForResource:nibName ofType:@"nib"] != nil)
+    FCViewControllerBase *vc = [self fc_createViewController];
+    if(vc)
     {
-        FCViewControllerBase *viewController = [[[self class] alloc] initWithNibName:nibName bundle:nil];
-        [viewController fc_markParams:object];
-        return viewController;
+        [vc fc_markParams:object];
     }
-    
-    NSLog(@"The nib %@ not exists", nibName);
-    
-    return nil;
+    return vc;
 }
 
 + (void)fc_pushToNavigation:(UINavigationController *)navigationController
