@@ -8,6 +8,7 @@
 
 #import "DialogListVC.h"
 #import "FCInputView.h"
+#import "FCAlertView.h"
 
 @interface DialogListVC ()<UITableViewDelegate>
 
@@ -46,6 +47,27 @@ static NSString * const kReuseCell = @"ReuseCell";
                                 dialog.keyboardType = UIKeyboardTypeDecimalPad;
                                 [dialog showInView:weakSelf submit:^(NSString *text) {
                                     NSLog(@"%@", text);
+                                }];
+                            }
+                    },
+                    @{
+                            @"text": @"Normal Alert",
+                            @"event":
+                            ^ {
+                                FCAlertView *dialog = [FCAlertView dialogWithTitle:@"Normal Alert"];
+                                [dialog showInView:weakSelf block:^ {
+                                    NSLog(@"Normal Alert");
+                                }];
+                            }
+                    },
+                    @{
+                            @"text": @"Not cancelable Alert",
+                            @"event":
+                            ^ {
+                                FCAlertView *dialog = [FCAlertView dialogWithTitle:@"Not cancelable Alert"];
+                                dialog.cancelAble = NO;
+                                [dialog showInView:weakSelf block:^ {
+                                    NSLog(@"Normal Alert");
                                 }];
                             }
                     },
