@@ -31,7 +31,7 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'FC-Utils/Classes/**/*'
-  s.public_header_files = 'FC-Utils/Classes/*.h'
+  s.public_header_files = 'FC-Utils/Classes/**/*.h'
   
   # s.resource_bundles = {
   #   'FC-Utils' => ['FC-Utils/Assets/*.png']

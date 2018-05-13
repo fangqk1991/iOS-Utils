@@ -26,9 +26,9 @@
 {
     [super viewDidAppear:animated];
     
-    [FQKDialog showSingleNumberInputDialogInView:self title:@"hehe" submit:^(NSString *text) {
-        
-    }];
+//    [FQKDialog showSingleNumberInputDialogInView:self title:@"hehe" submit:^(NSString *text) {
+//
+//    }];
 }
 
 - (void)didReceiveMemoryWarning
