@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'FC-Utils_Example' do
+  pod 'FC-Utils', :path => '../'
+
+  target 'FC-Utils_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
