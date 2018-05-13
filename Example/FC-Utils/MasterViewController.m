@@ -7,6 +7,7 @@
 //
 
 #import "MasterViewController.h"
+#import "FCDialog.h"
 
 @interface MasterViewController ()
 
@@ -21,18 +22,19 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     __weak __typeof(self)weakSelf = self;
-    
+
     _infos = @[
-               @[
-                   @{
-                       @"text": @"支付宝",
-                       @"event":
-                           ^{
-//                               [AlipayViewController fc_pushToNavigation:weakSelf.navigationController];
-                           }
-                       }
-                   ]
-               ];
+            @[
+                    @{
+                            @"text": @"FCDialog",
+                            @"event": ^{ [FCDialog showSingleTextInputDialogInView:weakSelf title:@"FCDialog" submit:nil]; }
+                    },
+                    @{
+                            @"text": @"支付宝",
+                            @"event": ^{}
+                    },
+            ],
+    ];
     
 }
 
