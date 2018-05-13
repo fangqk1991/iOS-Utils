@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		32FD936F20A8396100920EE3 /* PaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FD936D20A8396100920EE3 /* PaymentViewController.m */; };
-		32FD937020A8396100920EE3 /* PaymentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32FD936E20A8396100920EE3 /* PaymentViewController.xib */; };
 		32FD937C20A85CBD00920EE3 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FD937B20A85CBD00920EE3 /* MasterViewController.m */; };
+		32FD938020A864BD00920EE3 /* FromXib_FCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FD937E20A864BD00920EE3 /* FromXib_FCVC.m */; };
+		32FD938120A864BD00920EE3 /* FromXib_FCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32FD937F20A864BD00920EE3 /* FromXib_FCVC.xib */; };
+		32FD938420A865D800920EE3 /* Master_FCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FD938320A865D800920EE3 /* Master_FCVC.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -26,11 +27,13 @@
 		05978E0FEF3D9295C5ACF2A0 /* Pods-FC-Utils_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FC-Utils_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FC-Utils_Example/Pods-FC-Utils_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		1EE7993A45205BB15CD627B9 /* libPods-FC-Utils_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FC-Utils_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22C06848940352274B59CF83 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		32FD936C20A8396100920EE3 /* PaymentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaymentViewController.h; sourceTree = "<group>"; };
-		32FD936D20A8396100920EE3 /* PaymentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaymentViewController.m; sourceTree = "<group>"; };
-		32FD936E20A8396100920EE3 /* PaymentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentViewController.xib; sourceTree = "<group>"; };
 		32FD937A20A85CBD00920EE3 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
 		32FD937B20A85CBD00920EE3 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		32FD937D20A864BD00920EE3 /* FromXib_FCVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FromXib_FCVC.h; sourceTree = "<group>"; };
+		32FD937E20A864BD00920EE3 /* FromXib_FCVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FromXib_FCVC.m; sourceTree = "<group>"; };
+		32FD937F20A864BD00920EE3 /* FromXib_FCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FromXib_FCVC.xib; sourceTree = "<group>"; };
+		32FD938220A865D800920EE3 /* Master_FCVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Master_FCVC.h; sourceTree = "<group>"; };
+		32FD938320A865D800920EE3 /* Master_FCVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Master_FCVC.m; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* FC-Utils_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FC-Utils_Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -70,6 +73,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2FD7B67A3235A2D1A9A050B0 /* FCVC */ = {
+			isa = PBXGroup;
+			children = (
+				32FD938220A865D800920EE3 /* Master_FCVC.h */,
+				32FD938320A865D800920EE3 /* Master_FCVC.m */,
+				32FD937D20A864BD00920EE3 /* FromXib_FCVC.h */,
+				32FD937E20A864BD00920EE3 /* FromXib_FCVC.m */,
+				32FD937F20A864BD00920EE3 /* FromXib_FCVC.xib */,
+			);
+			path = FCVC;
+			sourceTree = "<group>";
+		};
+		2FD7B8393BC4A25A996DB049 /* FCDialog */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FCDialog;
+			sourceTree = "<group>";
+		};
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
@@ -107,14 +129,13 @@
 				6003F59C195388D20070C39A /* FCAppDelegate.h */,
 				6003F59D195388D20070C39A /* FCAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
-				32FD936C20A8396100920EE3 /* PaymentViewController.h */,
-				32FD936D20A8396100920EE3 /* PaymentViewController.m */,
-				32FD936E20A8396100920EE3 /* PaymentViewController.xib */,
+				32FD937A20A85CBD00920EE3 /* MasterViewController.h */,
+				32FD937B20A85CBD00920EE3 /* MasterViewController.m */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
-				32FD937A20A85CBD00920EE3 /* MasterViewController.h */,
-				32FD937B20A85CBD00920EE3 /* MasterViewController.m */,
+				2FD7B67A3235A2D1A9A050B0 /* FCVC */,
+				2FD7B8393BC4A25A996DB049 /* FCDialog */,
 			);
 			name = "Example for FC-Utils";
 			path = "FC-Utils";
@@ -230,10 +251,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32FD938120A864BD00920EE3 /* FromXib_FCVC.xib in Resources */,
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
-				32FD937020A8396100920EE3 /* PaymentViewController.xib in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,8 +289,9 @@
 			files = (
 				6003F59E195388D20070C39A /* FCAppDelegate.m in Sources */,
 				32FD937C20A85CBD00920EE3 /* MasterViewController.m in Sources */,
+				32FD938420A865D800920EE3 /* Master_FCVC.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
-				32FD936F20A8396100920EE3 /* PaymentViewController.m in Sources */,
+				32FD938020A864BD00920EE3 /* FromXib_FCVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

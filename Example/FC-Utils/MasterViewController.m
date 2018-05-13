@@ -8,6 +8,7 @@
 
 #import "MasterViewController.h"
 #import "FCDialog.h"
+#import "FromXib_FCVC.h"
 
 @interface MasterViewController ()
 
@@ -24,17 +25,17 @@
     __weak __typeof(self)weakSelf = self;
 
     _infos = @[
-            @[
-                    @{
-                            @"text": @"FCDialog",
-                            @"event": ^{ [FCDialog showSingleTextInputDialogInView:weakSelf title:@"FCDialog" submit:nil]; }
-                    },
-                    @{
-                            @"text": @"支付宝",
-                            @"event": ^{}
-                    },
-            ],
-    ];
+               @[
+                   @{
+                       @"text": @"FCVC",
+                       @"event": ^{ [FromXib_FCVC fc_pushToNavigation:weakSelf.navigationController]; }
+                       },
+                   @{
+                       @"text": @"FCDialog",
+                       @"event": ^{ [FCDialog showSingleTextInputDialogInView:weakSelf title:@"FCDialog" submit:nil]; }
+                       },
+                   ],
+               ];
     
 }
 
