@@ -8,7 +8,7 @@
 
 #import "MasterViewController.h"
 #import "FCDialog.h"
-#import "FromXib_FCVC.h"
+#import "Master_FCVC.h"
 
 @interface MasterViewController ()
 
@@ -28,7 +28,7 @@
                @[
                    @{
                        @"text": @"FCVC",
-                       @"event": ^{ [FromXib_FCVC fc_pushToNavigation:weakSelf.navigationController]; }
+                       @"event": ^{ [Master_FCVC fc_pushToNavigation:weakSelf.navigationController]; }
                        },
                    @{
                        @"text": @"FCDialog",

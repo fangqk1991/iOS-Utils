@@ -7,6 +7,9 @@
 
 #import "FCViewControllerBase.h"
 
+#define AssertFileExists(path) NSAssert([[NSFileManager defaultManager] fileExistsAtPath:path], @"Cannot find the file: %@", path)
+#define AssertNibExists(file_name_string) AssertFileExists([[NSBundle mainBundle] pathForResource:file_name_string ofType:@"nib"])
+
 @interface FCViewControllerBase ()
 
 @end
@@ -34,9 +37,17 @@
 
 + (instancetype)fc_createViewController:(id)object
 {
-    FCViewControllerBase *viewController = [[[self class] alloc] initWithNibName:NSStringFromClass([self class]) bundle:nil];
-    [viewController fc_markParams:object];
-    return viewController;
+    NSString *nibName = NSStringFromClass([self class]);
+    if([[NSBundle mainBundle] pathForResource:nibName ofType:@"nib"] != nil)
+    {
+        FCViewControllerBase *viewController = [[[self class] alloc] initWithNibName:nibName bundle:nil];
+        [viewController fc_markParams:object];
+        return viewController;
+    }
+    
+    NSLog(@"The nib %@ not exists", nibName);
+    
+    return nil;
 }
 
 + (void)fc_pushToNavigation:(UINavigationController *)navigationController
@@ -46,7 +57,11 @@
 
 + (void)fc_pushToNavigation:(UINavigationController *)navigationController params:(id)object
 {
-    [navigationController pushViewController:[self fc_createViewController:object] animated:YES];
+    UIViewController *vc = [self fc_createViewController:object];
+    if(vc)
+    {
+        [navigationController pushViewController:vc animated:YES];
+    }
 }
 
 @end
