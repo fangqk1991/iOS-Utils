@@ -54,7 +54,7 @@
 + (instancetype)fc_createViewController:(id)object
 {
     FCViewControllerBase *vc = [self fc_createViewController];
-    if(vc)
+    if(vc && object)
     {
         [vc fc_markParams:object];
     }

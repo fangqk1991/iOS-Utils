@@ -14,6 +14,8 @@
 @property (strong, nonatomic) NSArray *infos;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
+@property (nonatomic) int curIndex;
+
 @end
 
 @implementation Master_FCVC
@@ -26,15 +28,17 @@ static NSString * const kReuseCell = @"ReuseCell";
     
     __weak __typeof(self)weakSelf = self;
 
+    self.title = [NSString stringWithFormat:@"SB_FCVC_%d", _curIndex];
+
     _infos = @[
             @[
                     @{
-                            @"text": @"FromXib_FCVC",
-                            @"event": ^{ [FromXib_FCVC fc_pushToNavigation:weakSelf.navigationController]; }
+                            @"text": [NSString stringWithFormat:@"SB_FCVC_%d", _curIndex + 1],
+                            @"event": ^{ [Master_FCVC fc_pushToNavigation:weakSelf.navigationController params:@(_curIndex + 1)]; }
                     },
                     @{
-                            @"text": @"FromSB_FCVC",
-                            @"event": ^{ [Master_FCVC fc_pushToNavigation:weakSelf.navigationController]; }
+                            @"text": @"Xib_FCVC",
+                            @"event": ^{ [FromXib_FCVC fc_pushToNavigation:weakSelf.navigationController]; }
                     },
             ]
     ];
@@ -43,9 +47,10 @@ static NSString * const kReuseCell = @"ReuseCell";
 
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+- (void)fc_markParams:(id)object
+{
+    _curIndex = [object intValue];
 }
 
 #pragma mark - Table View
