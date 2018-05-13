@@ -7,6 +7,7 @@
 //
 
 #import "FCViewController.h"
+#import "FQKDialog.h"
 
 @interface FCViewController ()
 
@@ -18,6 +19,16 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    [FQKDialog showSingleNumberInputDialogInView:self title:@"hehe" submit:^(NSString *text) {
+        
+    }];
 }
 
 - (void)didReceiveMemoryWarning
