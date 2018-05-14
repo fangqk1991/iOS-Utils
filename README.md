@@ -17,7 +17,7 @@ FC-Utils is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'FC-Utils'
+pod 'FC-Utils', :git => 'https://github.com/fangqk1991/iOS-Utils.git'
 ```
 
 ## Author
