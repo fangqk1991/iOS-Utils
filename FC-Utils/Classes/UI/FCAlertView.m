@@ -28,12 +28,12 @@
     return [FCAlertView alertControllerWithTitle:title message:nil preferredStyle:UIAlertControllerStyleAlert];
 }
 
-- (void)showInView:(UIViewController *)viewController
+- (void)showInVC:(UIViewController *)viewController
 {
-    [self showInView:viewController block:nil];
+    [self showInVC:viewController block:nil];
 }
 
-- (void)showInView:(UIViewController *)viewController block:(void(^)(void))block
+- (void)showInVC:(UIViewController *)viewController block:(void(^)(void))block
 {
     {
         UIAlertAction *alertAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {

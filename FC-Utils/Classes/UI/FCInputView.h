@@ -13,6 +13,6 @@
 @property (nonatomic) NSString *fillText;
 
 + (instancetype)dialogWithTitle:(NSString *)title;
-- (void)showInView:(UIViewController *)viewController submit:(void(^)(NSString *text))block;
+- (void)showInVC:(UIViewController *)viewController submit:(void(^)(NSString *text))block;
 
 @end

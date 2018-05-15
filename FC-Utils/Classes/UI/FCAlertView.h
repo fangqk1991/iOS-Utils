@@ -12,7 +12,7 @@
 @property (nonatomic) BOOL cancelAble;
 
 + (instancetype)dialogWithTitle:(NSString *)title;
-- (void)showInView:(UIViewController *)viewController;
-- (void)showInView:(UIViewController *)viewController block:(void(^)(void))block;
+- (void)showInVC:(UIViewController *)viewController;
+- (void)showInVC:(UIViewController *)viewController block:(void(^)(void))block;
 
 @end

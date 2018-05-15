@@ -29,7 +29,7 @@
     return [FCInputView alertControllerWithTitle:title message:nil preferredStyle:UIAlertControllerStyleAlert];
 }
 
-- (void)showInView:(UIViewController *)viewController submit:(void(^)(NSString *text))block
+- (void)showInVC:(UIViewController *)viewController submit:(void(^)(NSString *text))block
 {
     __weak __typeof(self)weakSelf = self;
     

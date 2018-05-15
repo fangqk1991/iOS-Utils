@@ -34,7 +34,7 @@ static NSString * const kReuseCell = @"ReuseCell";
                             @"event":
                             ^ {
                                 FCInputView *dialog = [FCInputView dialogWithTitle:@"请输入文字"];
-                                [dialog showInView:weakSelf submit:^(NSString *text) {
+                                [dialog showInVC:weakSelf submit:^(NSString *text) {
                                     NSLog(@"%@", text);
                                 }];
                             }
@@ -45,7 +45,7 @@ static NSString * const kReuseCell = @"ReuseCell";
                             ^ {
                                 FCInputView *dialog = [FCInputView dialogWithTitle:@"请输入数字"];
                                 dialog.keyboardType = UIKeyboardTypeDecimalPad;
-                                [dialog showInView:weakSelf submit:^(NSString *text) {
+                                [dialog showInVC:weakSelf submit:^(NSString *text) {
                                     NSLog(@"%@", text);
                                 }];
                             }
@@ -55,7 +55,7 @@ static NSString * const kReuseCell = @"ReuseCell";
                             @"event":
                             ^ {
                                 FCAlertView *dialog = [FCAlertView dialogWithTitle:@"Normal Alert"];
-                                [dialog showInView:weakSelf block:^ {
+                                [dialog showInVC:weakSelf block:^ {
                                     NSLog(@"Normal Alert");
                                 }];
                             }
@@ -66,7 +66,7 @@ static NSString * const kReuseCell = @"ReuseCell";
                             ^ {
                                 FCAlertView *dialog = [FCAlertView dialogWithTitle:@"Not cancelable Alert"];
                                 dialog.cancelAble = NO;
-                                [dialog showInView:weakSelf block:^ {
+                                [dialog showInVC:weakSelf block:^ {
                                     NSLog(@"Normal Alert");
                                 }];
                             }
