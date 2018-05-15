@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FCTypicalTableVC.h"
 
-@interface MasterViewController : UITableViewController
+@interface MasterViewController : FCTypicalTableVC
 
 @end
