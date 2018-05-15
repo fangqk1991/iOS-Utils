@@ -9,6 +9,8 @@
 
 @interface FCAlertView ()
 
+@property (nonatomic) BOOL cancelAble;
+
 @end
 
 @implementation FCAlertView
@@ -28,9 +30,20 @@
     return [FCAlertView alertControllerWithTitle:title message:nil preferredStyle:UIAlertControllerStyleAlert];
 }
 
-- (void)showInVC:(UIViewController *)viewController
++ (instancetype)alertInVC:(UIViewController *)viewController message:(NSString *)message
 {
-    [self showInVC:viewController block:nil];
+    FCAlertView *dialog = [self dialogWithTitle:message];
+    dialog.cancelAble = NO;
+    [dialog showInVC:viewController block:nil];
+    return dialog;
+}
+
++ (instancetype)confirmInVC:(UIViewController *)viewController message:(NSString *)message block:(void(^)(void))block
+{
+    FCAlertView *dialog = [self dialogWithTitle:message];
+    dialog.cancelAble = YES;
+    [dialog showInVC:viewController block:block];
+    return dialog;
 }
 
 - (void)showInVC:(UIViewController *)viewController block:(void(^)(void))block

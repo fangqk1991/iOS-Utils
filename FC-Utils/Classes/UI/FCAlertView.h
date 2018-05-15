@@ -9,10 +9,7 @@
 
 @interface FCAlertView : UIAlertController
 
-@property (nonatomic) BOOL cancelAble;
-
-+ (instancetype)dialogWithTitle:(NSString *)title;
-- (void)showInVC:(UIViewController *)viewController;
-- (void)showInVC:(UIViewController *)viewController block:(void(^)(void))block;
++ (instancetype)alertInVC:(UIViewController *)viewController message:(NSString *)message;
++ (instancetype)confirmInVC:(UIViewController *)viewController message:(NSString *)message block:(void(^)(void))block;
 
 @end

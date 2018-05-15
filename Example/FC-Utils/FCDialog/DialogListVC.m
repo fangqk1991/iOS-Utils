@@ -54,8 +54,7 @@ static NSString * const kReuseCell = @"ReuseCell";
                             @"text": @"Normal Alert",
                             @"event":
                             ^ {
-                                FCAlertView *dialog = [FCAlertView dialogWithTitle:@"Normal Alert"];
-                                [dialog showInVC:weakSelf block:^ {
+                                [FCAlertView confirmInVC:weakSelf message:@"Normal Alert" block:^{
                                     NSLog(@"Normal Alert");
                                 }];
                             }
@@ -64,11 +63,7 @@ static NSString * const kReuseCell = @"ReuseCell";
                             @"text": @"Not cancelable Alert",
                             @"event":
                             ^ {
-                                FCAlertView *dialog = [FCAlertView dialogWithTitle:@"Not cancelable Alert"];
-                                dialog.cancelAble = NO;
-                                [dialog showInVC:weakSelf block:^ {
-                                    NSLog(@"Normal Alert");
-                                }];
+                                [FCAlertView alertInVC:weakSelf message:@"Not cancelable Alert"];
                             }
                     },
             ]
