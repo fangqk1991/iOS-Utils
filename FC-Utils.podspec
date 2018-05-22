@@ -30,8 +30,16 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'FC-Utils/Classes/**/*'
-  s.public_header_files = 'FC-Utils/Classes/**/*.h'
+  s.default_subspec = 'Core'
+
+  s.subspec 'Core' do |core|
+
+    core.dependency 'JPush', '~> 3.0.9'
+
+    core.source_files = 'FC-Utils/Core/*.{h,m}'
+    core.public_header_files = 'FC-Utils/Core/*.h'
+
+  end
   
   # s.resource_bundles = {
   #   'FC-Utils' => ['FC-Utils/Assets/*.png']

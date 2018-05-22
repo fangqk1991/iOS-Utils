@@ -9,6 +9,7 @@
 #import "DialogListVC.h"
 #import "FCInputView.h"
 #import "FCAlertView.h"
+#import "FCActionView.h"
 
 @interface DialogListVC ()<UITableViewDelegate>
 
@@ -28,46 +29,62 @@ static NSString * const kReuseCell = @"ReuseCell";
     __weak __typeof(self)weakSelf = self;
 
     _infos = @[
-            @[
-                    @{
-                            @"text": @"Input Text",
-                            @"event":
-                            ^ {
-                                FCInputView *dialog = [FCInputView dialogWithTitle:@"请输入文字"];
-                                [dialog showInVC:weakSelf submit:^(NSString *text) {
-                                    NSLog(@"%@", text);
-                                }];
-                            }
-                    },
-                    @{
-                            @"text": @"Input Number",
-                            @"event":
-                            ^ {
-                                FCInputView *dialog = [FCInputView dialogWithTitle:@"请输入数字"];
-                                dialog.keyboardType = UIKeyboardTypeDecimalPad;
-                                [dialog showInVC:weakSelf submit:^(NSString *text) {
-                                    NSLog(@"%@", text);
-                                }];
-                            }
-                    },
-                    @{
-                            @"text": @"Normal Alert",
-                            @"event":
-                            ^ {
-                                [FCAlertView confirmInVC:weakSelf message:@"Normal Alert" block:^{
-                                    NSLog(@"Normal Alert");
-                                }];
-                            }
-                    },
-                    @{
-                            @"text": @"Not cancelable Alert",
-                            @"event":
-                            ^ {
-                                [FCAlertView alertInVC:weakSelf message:@"Not cancelable Alert"];
-                            }
-                    },
-            ]
-    ];
+               @[
+                   @{
+                       @"text": @"Input Text",
+                       @"event":
+                           ^ {
+                               FCInputView *dialog = [FCInputView dialogWithTitle:@"请输入文字"];
+                               [dialog showInVC:weakSelf submit:^(NSString *text) {
+                                   NSLog(@"%@", text);
+                               }];
+                           }
+                       },
+                   @{
+                       @"text": @"Input Number",
+                       @"event":
+                           ^ {
+                               FCInputView *dialog = [FCInputView dialogWithTitle:@"请输入数字"];
+                               dialog.keyboardType = UIKeyboardTypeDecimalPad;
+                               [dialog showInVC:weakSelf submit:^(NSString *text) {
+                                   NSLog(@"%@", text);
+                               }];
+                           }
+                       },
+                   @{
+                       @"text": @"Normal Alert",
+                       @"event":
+                           ^ {
+                               [FCAlertView confirmInVC:weakSelf message:@"Normal Alert" block:^{
+                                   NSLog(@"Normal Alert");
+                               }];
+                           }
+                       },
+                   @{
+                       @"text": @"Not cancelable Alert",
+                       @"event":
+                           ^ {
+                               [FCAlertView alertInVC:weakSelf message:@"Not cancelable Alert"];
+                           }
+                       },
+                   @{
+                       @"text": @"ActionSheet",
+                       @"event":
+                           ^ {
+                               FCActionView *dialog = [FCActionView dialogWithTitle:@"请选择"];
+                               dialog.cancelable = YES;
+                               
+                               [dialog addAction:@"A" handler:^(UIAlertAction *action) {
+                                   [FCAlertView alertInVC:weakSelf message:@"A"];
+                               }];
+                               [dialog addAction:@"B" handler:^(UIAlertAction *action) {
+                                   [FCAlertView alertInVC:weakSelf message:@"B"];
+                               }];
+                               [dialog showInVC:weakSelf];
+                           }
+                       },
+                   ]
+               ];
 
     [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kReuseCell];
     
