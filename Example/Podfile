@@ -2,5 +2,5 @@
 
 target 'FC-Utils_Example' do
   pod 'FC-Utils', :path => '../'
-
+  pod 'FC-Utils/Toast', :path => '../'
 end

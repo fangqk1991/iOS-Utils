@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3262E32820B471160094EC5C /* ToastListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3262E32720B471160094EC5C /* ToastListVC.m */; };
 		329351A320A88F0E00C3E9AD /* DialogListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 329351A220A88F0E00C3E9AD /* DialogListVC.m */; };
 		32FD937C20A85CBD00920EE3 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FD937B20A85CBD00920EE3 /* MasterViewController.m */; };
 		32FD938020A864BD00920EE3 /* FromXib_FCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FD937E20A864BD00920EE3 /* FromXib_FCVC.m */; };
@@ -28,6 +29,8 @@
 		05978E0FEF3D9295C5ACF2A0 /* Pods-FC-Utils_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FC-Utils_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FC-Utils_Example/Pods-FC-Utils_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		1EE7993A45205BB15CD627B9 /* libPods-FC-Utils_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FC-Utils_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22C06848940352274B59CF83 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		3262E32620B471160094EC5C /* ToastListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToastListVC.h; sourceTree = "<group>"; };
+		3262E32720B471160094EC5C /* ToastListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToastListVC.m; sourceTree = "<group>"; };
 		329351A120A88F0E00C3E9AD /* DialogListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DialogListVC.h; sourceTree = "<group>"; };
 		329351A220A88F0E00C3E9AD /* DialogListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DialogListVC.m; sourceTree = "<group>"; };
 		32FD937A20A85CBD00920EE3 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
@@ -97,6 +100,15 @@
 			path = FCDialog;
 			sourceTree = "<group>";
 		};
+		3262E32220B470C20094EC5C /* FCToast */ = {
+			isa = PBXGroup;
+			children = (
+				3262E32620B471160094EC5C /* ToastListVC.h */,
+				3262E32720B471160094EC5C /* ToastListVC.m */,
+			);
+			path = FCToast;
+			sourceTree = "<group>";
+		};
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +153,7 @@
 				6003F594195388D20070C39A /* Supporting Files */,
 				2FD7B67A3235A2D1A9A050B0 /* FCVC */,
 				2FD7B8393BC4A25A996DB049 /* FCDialog */,
+				3262E32220B470C20094EC5C /* FCToast */,
 			);
 			name = "Example for FC-Utils";
 			path = "FC-Utils";
@@ -298,6 +311,7 @@
 				32FD938420A865D800920EE3 /* Master_FCVC.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 				32FD938020A864BD00920EE3 /* FromXib_FCVC.m in Sources */,
+				3262E32820B471160094EC5C /* ToastListVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

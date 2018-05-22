@@ -34,10 +34,17 @@ TODO: Add long description of the pod here.
 
   s.subspec 'Core' do |core|
 
-    core.dependency 'JPush', '~> 3.0.9'
-
     core.source_files = 'FC-Utils/Core/*.{h,m}'
     core.public_header_files = 'FC-Utils/Core/*.h'
+
+  end
+
+  s.subspec 'Toast' do |toast|
+
+    toast.dependency 'MBProgressHUD', '~> 1.1.0'
+
+    toast.source_files = 'FC-Utils/Toast/*.{h,m}'
+    toast.public_header_files = 'FC-Utils/Toast/*.h'
 
   end
   

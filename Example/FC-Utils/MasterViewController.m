@@ -9,6 +9,7 @@
 #import "MasterViewController.h"
 #import "Master_FCVC.h"
 #import "DialogListVC.h"
+#import "ToastListVC.h"
 
 @implementation MasterViewController
 
@@ -27,6 +28,10 @@
                    @{
                        @"text": @"FCDialog",
                        @"event": ^{ [DialogListVC fc_pushToNavigation:weakSelf.navigationController]; }
+                       },
+                   @{
+                       @"text": @"FCToast",
+                       @"event": ^{ [ToastListVC fc_pushToNavigation:weakSelf.navigationController]; }
                        },
                    ],
                ];
