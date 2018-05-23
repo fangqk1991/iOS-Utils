@@ -6,7 +6,6 @@
 //
 
 #import "FCTaskQueue.h"
-#import "FCAsyncTask.h"
 
 @interface FCTaskQueue()
 
@@ -48,7 +47,7 @@
     return self;
 }
 
-- (void)addOperation:(FCAsyncTask *)task
+- (void)addOperation:(NSOperation *)task
 {
     [_taskQueue addOperation:task];
 }

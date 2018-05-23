@@ -37,7 +37,6 @@
     {
         hud.label.text = message;
     }
-    hud.removeFromSuperViewOnHide = YES;
     [hud hideAnimated:YES afterDelay:delay];
 }
 

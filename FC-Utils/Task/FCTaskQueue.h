@@ -7,11 +7,9 @@
 
 #import <Foundation/Foundation.h>
 
-@class FCAsyncTask;
-
 @interface FCTaskQueue : NSObject
 
 + (instancetype)getInstance;
-- (void)addOperation:(FCAsyncTask *)task;
+- (void)addOperation:(NSOperation *)task;
 
 @end

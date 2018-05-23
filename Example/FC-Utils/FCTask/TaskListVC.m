@@ -10,6 +10,7 @@
 #import "FCAsyncTask.h"
 #import "NSLogger.h"
 #import "MBProgressHUD.h"
+#import "MyAsyncTask.h"
 
 @interface TaskListVC ()
 
@@ -26,10 +27,17 @@
     self.infos = @[
                    @[
                        @{
-                           @"text": @"Normal Task",
+                           @"text": @"AsyncTask",
                            @"event":
                                ^{
                                    [weakSelf normalTask];
+                               }
+                           },
+                       @{
+                           @"text": @"FCTypicalTask",
+                           @"event":
+                               ^{
+                                   [weakSelf typicalTask];
                                }
                            },
                        ],
@@ -40,7 +48,7 @@
 {
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     hud.mode = MBProgressHUDModeAnnularDeterminate;
-    hud.label.text = @"Loading";
+    hud.detailsLabel.text = @"Loading";
     
     FCAsyncTask *task = [[FCAsyncTask alloc] init];
     task.onPreExecuteBlock = ^{
@@ -48,7 +56,7 @@
     };
     task.onProgressUpdateBlock = ^(NSUInteger current, NSUInteger total) {
         hud.progress = 1.0 * current / total;
-        hud.label.text = [NSString stringWithFormat:@"%@ / %@", @(current), @(total)];
+        hud.detailsLabel.text = [NSString stringWithFormat:@"%@ / %@", @(current), @(total)];
         LoggerApp(3, @"Progress: %@ / %@", @(current), @(total));
     };
     task.doInBackgroundBlock = ^id(FCAsyncTask *_self) {
@@ -63,6 +71,13 @@
     task.onPostExecuteBlock = ^(id result) {
         [hud hideAnimated:YES];
     };
+    [task execute];
+}
+
+- (void)typicalTask
+{
+    MyAsyncTask *task = [[MyAsyncTask alloc] initWithView:self.view];
+    task.hint = @"请等待";
     [task execute];
 }
 
