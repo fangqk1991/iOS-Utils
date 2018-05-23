@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3262E32820B471160094EC5C /* ToastListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3262E32720B471160094EC5C /* ToastListVC.m */; };
+		3277B71320B52881005B879B /* TaskListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3277B71220B52881005B879B /* TaskListVC.m */; };
 		329351A320A88F0E00C3E9AD /* DialogListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 329351A220A88F0E00C3E9AD /* DialogListVC.m */; };
 		32FD937C20A85CBD00920EE3 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FD937B20A85CBD00920EE3 /* MasterViewController.m */; };
 		32FD938020A864BD00920EE3 /* FromXib_FCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FD937E20A864BD00920EE3 /* FromXib_FCVC.m */; };
@@ -31,6 +32,8 @@
 		22C06848940352274B59CF83 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		3262E32620B471160094EC5C /* ToastListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToastListVC.h; sourceTree = "<group>"; };
 		3262E32720B471160094EC5C /* ToastListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToastListVC.m; sourceTree = "<group>"; };
+		3277B71120B52881005B879B /* TaskListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaskListVC.h; sourceTree = "<group>"; };
+		3277B71220B52881005B879B /* TaskListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaskListVC.m; sourceTree = "<group>"; };
 		329351A120A88F0E00C3E9AD /* DialogListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DialogListVC.h; sourceTree = "<group>"; };
 		329351A220A88F0E00C3E9AD /* DialogListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DialogListVC.m; sourceTree = "<group>"; };
 		32FD937A20A85CBD00920EE3 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
@@ -109,6 +112,15 @@
 			path = FCToast;
 			sourceTree = "<group>";
 		};
+		3277B71020B52835005B879B /* FCTask */ = {
+			isa = PBXGroup;
+			children = (
+				3277B71120B52881005B879B /* TaskListVC.h */,
+				3277B71220B52881005B879B /* TaskListVC.m */,
+			);
+			path = FCTask;
+			sourceTree = "<group>";
+		};
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +166,7 @@
 				2FD7B67A3235A2D1A9A050B0 /* FCVC */,
 				2FD7B8393BC4A25A996DB049 /* FCDialog */,
 				3262E32220B470C20094EC5C /* FCToast */,
+				3277B71020B52835005B879B /* FCTask */,
 			);
 			name = "Example for FC-Utils";
 			path = "FC-Utils";
@@ -312,6 +325,7 @@
 				6003F59A195388D20070C39A /* main.m in Sources */,
 				32FD938020A864BD00920EE3 /* FromXib_FCVC.m in Sources */,
 				3262E32820B471160094EC5C /* ToastListVC.m in Sources */,
+				3277B71320B52881005B879B /* TaskListVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
