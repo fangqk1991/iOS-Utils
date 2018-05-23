@@ -23,7 +23,6 @@
     if (self != nil)
     {
         self.view = view;
-        self.hint = @"Loading";
     }
     return self;
 }
@@ -41,7 +40,14 @@
 
 - (void)onPreExecute
 {
-    _hud = [MBProgressHUD showHUDAddedTo:_view animated:YES];
+    UIView *view = _view;
+    
+    if(view == nil)
+    {
+        view = [[[UIApplication sharedApplication] delegate] window];
+    }
+    
+    _hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
     _hud.mode = MBProgressHUDModeIndeterminate;
     _hud.detailsLabel.text = _hint;
     
@@ -50,8 +56,14 @@
 
 - (void)onProgressUpdateCurrent:(NSUInteger)current total:(NSUInteger)total
 {
+    NSString *hint = _hint;
+    if(hint == nil)
+    {
+        hint = @"Waiting";
+    }
+    
     dispatch_async(dispatch_get_main_queue(), ^{
-        self.hud.detailsLabel.text = [NSString stringWithFormat:@"Waiting %@/%@", @(current), @(total)];
+        self.hud.detailsLabel.text = [NSString stringWithFormat:@"%@ %@/%@", hint, @(current), @(total)];
     });
 }
 
