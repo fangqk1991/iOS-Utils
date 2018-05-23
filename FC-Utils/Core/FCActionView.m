@@ -13,6 +13,7 @@
 {
     if(self = [super init])
     {
+        self.cancelable = YES;
     }
     
     return self;

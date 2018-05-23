@@ -72,8 +72,6 @@ static NSString * const kReuseCell = @"ReuseCell";
                        @"event":
                            ^ {
                                FCActionView *dialog = [FCActionView dialogWithTitle:@"请选择"];
-                               dialog.cancelable = YES;
-                               
                                [dialog addAction:@"A" handler:^(UIAlertAction *action) {
                                    [FCAlertView alertInVC:weakSelf message:@"A"];
                                }];
