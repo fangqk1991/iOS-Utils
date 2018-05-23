@@ -6,6 +6,7 @@
 //
 
 #import "FCAsyncTask2.h"
+#import <UIKit/UIKit.h>
 
 @interface FCTypicalTask : FCAsyncTask2
 
