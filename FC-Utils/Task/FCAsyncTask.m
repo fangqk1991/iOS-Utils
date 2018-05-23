@@ -1,0 +1,71 @@
+//
+//  FCAsyncTask.m
+//  FC-Utils
+//
+//  Created by fang on 2018/5/23.
+//
+
+#import "FCAsyncTask.h"
+#import "FCTaskQueue.h"
+
+@implementation FCAsyncTask
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self != nil)
+    {
+    }
+    return self;
+}
+
+- (void)updateProgress:(NSUInteger)current total:(NSUInteger)total
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if(self.onProgressUpdateBlock)
+        {
+            self.onProgressUpdateBlock(current, total);
+        }
+    });
+}
+
+- (void)onCancelled
+{
+}
+
+- (void)execute
+{
+    [[FCTaskQueue getInstance] addOperation:self];
+}
+
+- (void)main
+{
+    if (self.isCancelled)
+    {
+        [self onCancelled];
+        return;
+    }
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if(self.onPreExecuteBlock)
+        {
+            self.onPreExecuteBlock();
+        }
+    });
+    
+    id result = self.doInBackgroundBlock(self);
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if(self.onPostExecuteBlock)
+        {
+            self.onPostExecuteBlock(result);
+        }
+    });
+}
+
+- (void)dealloc
+{
+    NSLog(@"---------- %@ - %@ ----------", NSStringFromClass([self class]), NSStringFromSelector(_cmd));
+}
+
+@end

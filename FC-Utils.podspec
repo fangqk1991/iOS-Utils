@@ -34,8 +34,16 @@ TODO: Add long description of the pod here.
 
   s.subspec 'Core' do |core|
 
+    core.dependency 'FC-Utils/Task'
     core.source_files = 'FC-Utils/Core/*.{h,m}'
     core.public_header_files = 'FC-Utils/Core/*.h'
+
+  end
+
+  s.subspec 'Task' do |task|
+
+    task.source_files = 'FC-Utils/Task/*.{h,m}'
+    task.public_header_files = 'FC-Utils/Task/*.h'
 
   end
 
