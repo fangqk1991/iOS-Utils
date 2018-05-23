@@ -40,6 +40,11 @@
 
 - (void)main
 {
+    if(self.doInBackgroundBlock == nil)
+    {
+        [NSException raise:NSInvalidArgumentException format:@"You must assign doInBackgroundBlock"];
+    }
+    
     if (self.isCancelled)
     {
         [self onCancelled];

@@ -8,6 +8,7 @@
 
 #import "TaskListVC.h"
 #import "FCAsyncTask.h"
+#import "NSLogger.h"
 
 @interface TaskListVC ()
 
@@ -37,6 +38,10 @@
 - (void)normalTask
 {
     FCAsyncTask *task = [[FCAsyncTask alloc] init];
+    task.doInBackgroundBlock = ^id(FCAsyncTask *_self) {
+        LoggerApp(3, @"doInBackgroundBlock");
+        return nil;
+    };
     [task execute];
 }
 
