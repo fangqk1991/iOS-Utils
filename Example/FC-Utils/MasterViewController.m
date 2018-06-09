@@ -11,6 +11,7 @@
 #import "DialogListVC.h"
 #import "ToastListVC.h"
 #import "TaskListVC.h"
+#import "FCInputGroupVC.h"
 
 @implementation MasterViewController
 
@@ -37,6 +38,10 @@
                    @{
                        @"text": @"FCTask",
                        @"event": ^{ [TaskListVC fc_pushToNavigation:weakSelf.navigationController]; }
+                       },
+                   @{
+                       @"text": @"FCInputGroup",
+                       @"event": ^{ [FCInputGroupVC fc_pushToNavigation:weakSelf.navigationController]; }
                        },
                    ],
                ];

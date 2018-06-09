@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="pev-Vr-rHS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="pev-Vr-rHS">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -102,6 +102,7 @@
                         <segue destination="xP3-Hq-kcR" kind="show" id="MKO-1Z-b46"/>
                         <segue destination="TqO-3t-av6" kind="show" id="ATc-0b-ywj"/>
                         <segue destination="R46-mc-0Fl" kind="show" id="UZM-fI-Qjj"/>
+                        <segue destination="W8t-Wf-IkA" kind="show" id="is0-qn-SSl"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u4W-hS-ITA" sceneMemberID="firstResponder"/>
@@ -172,6 +173,77 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pRI-ES-gRk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1734" y="214"/>
+        </scene>
+        <!--Input GroupVC-->
+        <scene sceneID="Hng-re-yE4">
+            <objects>
+                <viewController storyboardIdentifier="sb_FCInputGroupVC" id="W8t-Wf-IkA" customClass="FCInputGroupVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lmd-h8-hZy"/>
+                        <viewControllerLayoutGuide type="bottom" id="Etx-RT-xjQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ane-Vk-AI6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="QP2-BT-wsj">
+                                <rect key="frame" x="20" y="20" width="335" height="144"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="it1-kj-isH">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CDq-rb-n8r">
+                                        <rect key="frame" x="0.0" y="38" width="335" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6ft-wD-tav">
+                                        <rect key="frame" x="0.0" y="76" width="335" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GHP-zv-SvS">
+                                        <rect key="frame" x="0.0" y="114" width="335" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="it1-kj-isH" secondAttribute="trailing" id="5yD-iv-wf2"/>
+                                    <constraint firstAttribute="trailing" secondItem="GHP-zv-SvS" secondAttribute="trailing" id="IKn-41-vhQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="CDq-rb-n8r" secondAttribute="trailing" id="Jhk-aR-RMo"/>
+                                    <constraint firstItem="6ft-wD-tav" firstAttribute="leading" secondItem="QP2-BT-wsj" secondAttribute="leading" id="LAF-Xh-r5P"/>
+                                    <constraint firstItem="it1-kj-isH" firstAttribute="leading" secondItem="QP2-BT-wsj" secondAttribute="leading" id="UIQ-Hw-6DJ"/>
+                                    <constraint firstItem="CDq-rb-n8r" firstAttribute="leading" secondItem="QP2-BT-wsj" secondAttribute="leading" id="XqD-88-9hu"/>
+                                    <constraint firstAttribute="trailing" secondItem="6ft-wD-tav" secondAttribute="trailing" id="Zkl-Cq-Cj4"/>
+                                    <constraint firstItem="GHP-zv-SvS" firstAttribute="leading" secondItem="QP2-BT-wsj" secondAttribute="leading" id="wsk-Ef-cC8"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="QP2-BT-wsj" secondAttribute="trailing" constant="20" id="D37-q6-XB0"/>
+                            <constraint firstItem="QP2-BT-wsj" firstAttribute="top" secondItem="ane-Vk-AI6" secondAttribute="top" constant="20" id="XY3-oL-Ckg"/>
+                            <constraint firstItem="QP2-BT-wsj" firstAttribute="leading" secondItem="ane-Vk-AI6" secondAttribute="leading" constant="20" id="jqN-kU-nPZ"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <connections>
+                        <outletCollection property="textFieldCollection" destination="it1-kj-isH" id="XQY-89-w5A"/>
+                        <outletCollection property="textFieldCollection" destination="CDq-rb-n8r" id="oA9-rf-mUf"/>
+                        <outletCollection property="textFieldCollection" destination="6ft-wD-tav" id="S60-aJ-u2p"/>
+                        <outletCollection property="textFieldCollection" destination="GHP-zv-SvS" id="Rwq-tc-8sg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7OZ-nV-f8K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2692" y="214"/>
         </scene>
         <!--Task ListVC-->
         <scene sceneID="sq7-8E-mIR">
