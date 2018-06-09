@@ -11,6 +11,7 @@
 		3277B71320B52881005B879B /* TaskListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3277B71220B52881005B879B /* TaskListVC.m */; };
 		3277B71E20B5528D005B879B /* MyAsyncTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 3277B71D20B5528D005B879B /* MyAsyncTask.m */; };
 		329351A320A88F0E00C3E9AD /* DialogListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 329351A220A88F0E00C3E9AD /* DialogListVC.m */; };
+		32B89AB520CC10F0003A84E8 /* DownCounterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 32B89AB420CC10F0003A84E8 /* DownCounterVC.m */; };
 		32D72CEA20CB8FD5004E5553 /* FCInputGroupVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 32D72CE920CB8FD5004E5553 /* FCInputGroupVC.m */; };
 		32FD937C20A85CBD00920EE3 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FD937B20A85CBD00920EE3 /* MasterViewController.m */; };
 		32FD938020A864BD00920EE3 /* FromXib_FCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 32FD937E20A864BD00920EE3 /* FromXib_FCVC.m */; };
@@ -40,6 +41,8 @@
 		3277B71D20B5528D005B879B /* MyAsyncTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyAsyncTask.m; sourceTree = "<group>"; };
 		329351A120A88F0E00C3E9AD /* DialogListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DialogListVC.h; sourceTree = "<group>"; };
 		329351A220A88F0E00C3E9AD /* DialogListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DialogListVC.m; sourceTree = "<group>"; };
+		32B89AB320CC10F0003A84E8 /* DownCounterVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownCounterVC.h; sourceTree = "<group>"; };
+		32B89AB420CC10F0003A84E8 /* DownCounterVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownCounterVC.m; sourceTree = "<group>"; };
 		32D72CE820CB8FD5004E5553 /* FCInputGroupVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCInputGroupVC.h; sourceTree = "<group>"; };
 		32D72CE920CB8FD5004E5553 /* FCInputGroupVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FCInputGroupVC.m; sourceTree = "<group>"; };
 		32FD937A20A85CBD00920EE3 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
@@ -129,6 +132,15 @@
 			path = FCTask;
 			sourceTree = "<group>";
 		};
+		32B89AB220CC10BD003A84E8 /* FCDownCounter */ = {
+			isa = PBXGroup;
+			children = (
+				32B89AB320CC10F0003A84E8 /* DownCounterVC.h */,
+				32B89AB420CC10F0003A84E8 /* DownCounterVC.m */,
+			);
+			path = FCDownCounter;
+			sourceTree = "<group>";
+		};
 		32D72CE720CB8E3C004E5553 /* FCInputGroup */ = {
 			isa = PBXGroup;
 			children = (
@@ -185,6 +197,7 @@
 				3262E32220B470C20094EC5C /* FCToast */,
 				3277B71020B52835005B879B /* FCTask */,
 				32D72CE720CB8E3C004E5553 /* FCInputGroup */,
+				32B89AB220CC10BD003A84E8 /* FCDownCounter */,
 			);
 			name = "Example for FC-Utils";
 			path = "FC-Utils";
@@ -344,6 +357,7 @@
 				6003F59A195388D20070C39A /* main.m in Sources */,
 				32D72CEA20CB8FD5004E5553 /* FCInputGroupVC.m in Sources */,
 				32FD938020A864BD00920EE3 /* FromXib_FCVC.m in Sources */,
+				32B89AB520CC10F0003A84E8 /* DownCounterVC.m in Sources */,
 				3262E32820B471160094EC5C /* ToastListVC.m in Sources */,
 				3277B71320B52881005B879B /* TaskListVC.m in Sources */,
 			);

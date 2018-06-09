@@ -12,6 +12,8 @@
 #import "ToastListVC.h"
 #import "TaskListVC.h"
 #import "FCInputGroupVC.h"
+#import "UIImage+Color.h"
+#import "DownCounterVC.h"
 
 @implementation MasterViewController
 
@@ -42,8 +44,13 @@
                        },
                    @{
                        @"text": @"FCInputGroup",
-                       @"icon": [UIImage imageNamed:@"color_21d9cc"],
+                       @"icon": [UIImage imageWithColor:[UIColor orangeColor] size:CGSizeMake(5, 5)],
                        @"event": ^{ [FCInputGroupVC fc_pushToNavigation:weakSelf.navigationController]; }
+                       },
+                   @{
+                       @"text": @"FCDownCounter",
+                       @"icon": [UIImage imageWithColor:[UIColor orangeColor] size:CGSizeMake(10, 10)],
+                       @"event": ^{ [DownCounterVC fc_pushToNavigation:weakSelf.navigationController]; }
                        },
                    ],
                ];
