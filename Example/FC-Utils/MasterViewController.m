@@ -37,10 +37,12 @@
                        },
                    @{
                        @"text": @"FCTask",
+                       @"icon": [UIImage imageNamed:@"color_000000"],
                        @"event": ^{ [TaskListVC fc_pushToNavigation:weakSelf.navigationController]; }
                        },
                    @{
                        @"text": @"FCInputGroup",
+                       @"icon": [UIImage imageNamed:@"color_21d9cc"],
                        @"event": ^{ [FCInputGroupVC fc_pushToNavigation:weakSelf.navigationController]; }
                        },
                    ],

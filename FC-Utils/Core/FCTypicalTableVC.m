@@ -45,6 +45,7 @@ static NSString * const kReuseCell = @"ReuseCell";
     NSArray *array = _infos[indexPath.section];
     NSDictionary *info = array[indexPath.row];
     cell.textLabel.text = info[@"text"];
+    cell.imageView.image = info[@"icon"];
     
     return cell;
 }
