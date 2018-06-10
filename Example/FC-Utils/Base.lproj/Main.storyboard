@@ -104,6 +104,7 @@
                         <segue destination="R46-mc-0Fl" kind="show" id="UZM-fI-Qjj"/>
                         <segue destination="W8t-Wf-IkA" kind="show" id="is0-qn-SSl"/>
                         <segue destination="fG7-P1-l97" kind="show" id="jrC-Ms-9u6"/>
+                        <segue destination="5fc-Ct-deG" kind="show" id="tuc-Sm-tdL"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u4W-hS-ITA" sceneMemberID="firstResponder"/>
@@ -274,7 +275,7 @@
             </objects>
             <point key="canvasLocation" x="1734" y="-576"/>
         </scene>
-        <!--Down CountVC-->
+        <!--Down CounterVC-->
         <scene sceneID="95n-XK-kNO">
             <objects>
                 <tableViewController storyboardIdentifier="sb_DownCountVC" id="fG7-P1-l97" customClass="DownCounterVC" sceneMemberID="viewController">
@@ -301,6 +302,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JtE-Rv-tYP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1518" y="-1281"/>
+        </scene>
+        <!--File HelperVC-->
+        <scene sceneID="QhQ-e2-WUU">
+            <objects>
+                <tableViewController storyboardIdentifier="sb_FileHelperVC" id="5fc-Ct-deG" customClass="FileHelperVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Qxn-Fq-qBY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Y2m-o7-nNr">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Y2m-o7-nNr" id="BYY-dq-E3k">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="5fc-Ct-deG" id="5wA-bb-B9l"/>
+                            <outlet property="delegate" destination="5fc-Ct-deG" id="D9V-qt-dEO"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u6J-Um-oGC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="527" y="-1320"/>
         </scene>
     </scenes>
 </document>

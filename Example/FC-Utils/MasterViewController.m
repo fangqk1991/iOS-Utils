@@ -14,6 +14,7 @@
 #import "FCInputGroupVC.h"
 #import "DownCounterVC.h"
 #import "UIColor+Extensions.h"
+#import "FileHelperVC.h"
 
 @implementation MasterViewController
 
@@ -51,6 +52,11 @@
                        @"text": @"FCDownCounter",
                        @"icon": [[UIColor orangeColor] createImageWithSize:CGSizeMake(5, 5)],
                        @"event": ^{ [DownCounterVC fc_pushToNavigation:weakSelf.navigationController]; }
+                       },
+                   @{
+                       @"text": @"FCFileHelper",
+                       @"icon": [[UIColor orangeColor] createImageWithSize:CGSizeMake(5, 5)],
+                       @"event": ^{ [FileHelperVC fc_pushToNavigation:weakSelf.navigationController]; }
                        },
                    ],
                ];
