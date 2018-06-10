@@ -35,6 +35,7 @@ TODO: Add long description of the pod here.
   s.subspec 'Core' do |core|
 
     core.dependency 'FC-Utils/Task'
+    core.dependency 'FC-Utils/Extensions'
     core.source_files = 'FC-Utils/Core/*.{h,m}'
     core.public_header_files = 'FC-Utils/Core/*.h'
 
@@ -53,6 +54,13 @@ TODO: Add long description of the pod here.
 
     toast.source_files = 'FC-Utils/Toast/*.{h,m}'
     toast.public_header_files = 'FC-Utils/Toast/*.h'
+
+  end
+
+  s.subspec 'Extensions' do |extensions|
+
+    extensions.source_files = 'FC-Utils/Extensions/*.{h,m}'
+    extensions.public_header_files = 'FC-Utils/Extensions/*.h'
 
   end
   
