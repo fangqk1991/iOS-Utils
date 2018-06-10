@@ -25,7 +25,16 @@
         self.onLastReturn = onLastReturn;
         
         for (UITextField *textField in textFields) {
+            textField.returnKeyType = UIReturnKeyNext;
             textField.delegate = self;
+        }
+        
+        {
+            UITextField *textField = [self.textFields lastObject];
+            if(textField)
+            {
+                textField.returnKeyType = UIReturnKeyGo;
+            }
         }
     }
     return self;
