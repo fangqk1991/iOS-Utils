@@ -11,8 +11,8 @@
 
 @property (nonatomic) NSUInteger totalSeconds;
 @property (nonatomic) CGFloat step;
-@property (nonatomic) BOOL running;
 
+@property (atomic) BOOL running;
 @property (atomic) CGFloat remain;
 
 @end
@@ -23,9 +23,9 @@
 {
     if(self = [super init])
     {
-        self.running = NO;
-        self.totalSeconds = 0;
-        self.step = 1;
+        _running = NO;
+        _totalSeconds = 0;
+        _step = 1;
     }
     return self;
 }
@@ -37,6 +37,7 @@
 
 - (void)setTotalSeconds:(NSUInteger)totalSeconds step:(CGFloat)step
 {
+    _running = NO;
     _totalSeconds = totalSeconds;
     _remain = totalSeconds;
     _step = step;
@@ -50,16 +51,24 @@
 
 - (void)startWithStepCallback:(void(^)(CGFloat remain))stepCallback doneCallback:(void(^)(void))doneCallback
 {
-    if(self.running)
+    if(_running)
     {
         return ;
     }
+    
+    _running = YES;
     
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_source_t timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);
     
     dispatch_source_set_timer(timer,dispatch_walltime(NULL, 0), self.step * NSEC_PER_SEC, 0);
     dispatch_source_set_event_handler(timer, ^{
+        
+        if(!self.running)
+        {
+            dispatch_source_cancel(timer);
+            return ;
+        }
         
         if(self.remain > 0)
         {
