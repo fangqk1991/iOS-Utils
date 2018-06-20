@@ -11,7 +11,10 @@ typedef void (^FCPhotoPickerBlock)(UIImage *image);
 
 @interface FCPhotoPicker : NSObject
 
-- (instancetype)initWithTitle:(NSString *)title targetSize:(CGSize)targetSize handler:(FCPhotoPickerBlock)block;
+@property (nonatomic, copy) NSString *title;
+@property (nonatomic) CGSize targetSize;
+@property (nonatomic, copy) FCPhotoPickerBlock handler;
+
 - (void)showInView:(UIViewController *)viewController;
 
 @end

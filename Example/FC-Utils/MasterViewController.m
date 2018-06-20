@@ -15,6 +15,13 @@
 #import "DownCounterVC.h"
 #import "UIColor+Extensions.h"
 #import "FileHelperVC.h"
+#import "FCPhotoPicker.h"
+
+@interface MasterViewController()
+
+@property (strong, nonatomic) FCPhotoPicker *photoPicker;
+
+@end
 
 @implementation MasterViewController
 
@@ -58,9 +65,27 @@
                        @"icon": [[UIColor orangeColor] createImageWithSize:CGSizeMake(5, 5)],
                        @"event": ^{ [FileHelperVC fc_pushToNavigation:weakSelf.navigationController]; }
                        },
+                   @{
+                       @"text": @"FCPhotoPicker",
+                       @"icon": [[UIColor orangeColor] createImageWithSize:CGSizeMake(5, 5)],
+                       @"event": ^{ [weakSelf exampleForFCPhotoPicker]; }
+                       },
                    ],
                ];
     
+}
+
+- (void)exampleForFCPhotoPicker
+{    
+    FCPhotoPicker *picker = [[FCPhotoPicker alloc] init];
+    picker.title = @"请选择头像";
+    picker.targetSize = CGSizeMake(210, 210);
+    picker.handler = ^(UIImage *image) {
+        NSLog(@"exampleForFCPhotoPicker: %@", image);
+    };
+    [picker showInView:self];
+    
+    _photoPicker = picker;
 }
 
 @end

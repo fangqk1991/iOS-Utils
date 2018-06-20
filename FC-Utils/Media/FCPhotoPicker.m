@@ -10,11 +10,6 @@
 
 @interface FCPhotoPicker()<UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
-@property (nonatomic, copy) NSString *title;
-@property (nonatomic, copy) FCPhotoPickerBlock block;
-
-@property (nonatomic) CGSize targetSize;
-
 @end
 
 @implementation FCPhotoPicker
@@ -23,18 +18,8 @@
 {
     if(self = [super init])
     {
-        _targetSize = CGSizeMake(210, 210);
-    }
-    return self;
-}
-
-- (instancetype)initWithTitle:(NSString *)title targetSize:(CGSize)targetSize handler:(FCPhotoPickerBlock)block
-{
-    if(self = [self init])
-    {
-        self.title = title;
-        self.block = block;
-        _targetSize = targetSize;
+        self.title = @"请选择";
+        self.targetSize = CGSizeMake(210, 210);
     }
     return self;
 }
@@ -44,7 +29,7 @@
     UIAlertController * controller = [UIAlertController alertControllerWithTitle:_title message:nil preferredStyle:UIAlertControllerStyleActionSheet];
     
     {
-        UIAlertAction *alertAction = [UIAlertAction actionWithTitle:@"拍照" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action){
+        UIAlertAction *alertAction = [UIAlertAction actionWithTitle:@"拍照" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
             [self openImagePicker:UIImagePickerControllerSourceTypeCamera viewController:viewController];
         }];
         [controller addAction:alertAction];
@@ -81,19 +66,19 @@
 {
     [picker dismissViewControllerAnimated:YES completion:nil];
     
-    UIImage * image = [info objectForKey:UIImagePickerControllerEditedImage];
-    if (image != nil)
+    UIImage *image = [info objectForKey:UIImagePickerControllerEditedImage];
+    if (image && _handler)
     {
         UIImage *avatarImage = [image fc_thumbnail:_targetSize];
-        
-        _block(avatarImage);
-        _block = nil;
+        _handler(avatarImage);
+        _handler = nil;
     }
 }
+
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
     [picker dismissViewControllerAnimated:YES completion:nil];
-    _block = nil;
+    _handler = nil;
 }
 
 @end
