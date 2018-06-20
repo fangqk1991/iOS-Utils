@@ -75,7 +75,7 @@
 		74E641F8140F1F5FF0FD7282 /* Pods-FC-Utils_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FC-Utils_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-FC-Utils_Example/Pods-FC-Utils_Example.release.xcconfig"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9A0E68FAE5E3CDAF6E311931 /* Pods-FC-Utils_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FC-Utils_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FC-Utils_Tests/Pods-FC-Utils_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		D477E441531F6F8A56C90787 /* FC-Utils.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = "FC-Utils.podspec"; path = "../FC-Utils.podspec"; sourceTree = "<group>"; };
+		D477E441531F6F8A56C90787 /* FC-Utils.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = "FC-Utils.podspec"; path = "../FC-Utils.podspec"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		EC28EE61B8C96C0DDA601D34 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
