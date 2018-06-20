@@ -36,7 +36,7 @@ TODO: Add long description of the pod here.
 
     core.dependency 'FC-Utils/Task'
     core.dependency 'FC-Utils/Extensions'
-    core.dependency 'FC-Utils/Photo'
+    core.dependency 'FC-Utils/Media'
     core.source_files = 'FC-Utils/Core/*.{h,m}'
     core.public_header_files = 'FC-Utils/Core/*.h'
 
@@ -65,10 +65,10 @@ TODO: Add long description of the pod here.
 
   end
 
-  s.subspec 'Photo' do |photo|
+  s.subspec 'Media' do |media|
 
-    photo.source_files = 'FC-Utils/Photo/*.{h,m}'
-    photo.public_header_files = 'FC-Utils/Photo/*.h'
+    media.source_files = 'FC-Utils/Media/*.{h,m}'
+    media.public_header_files = 'FC-Utils/Media/*.h'
 
   end
   
