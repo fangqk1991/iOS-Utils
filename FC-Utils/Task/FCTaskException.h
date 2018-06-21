@@ -9,4 +9,6 @@
 
 @interface FCTaskException : NSException
 
++ (void)fc_raise:(NSString *)format, ...;
+
 @end

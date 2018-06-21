@@ -70,7 +70,7 @@
     task.doInBackgroundBlock = ^id(FCAsyncTask *_self) {
         LoggerApp(3, @"doInBackgroundBlock");
         
-//        [FCTaskException raise:NSInternalInconsistencyException format:@"[%@] raise.", NSStringFromSelector(_cmd)];
+//        [FCTaskException fc_raise:@"[%@] raise.", NSStringFromSelector(_cmd)];
 
         for(int i = 0; i < 10; ++i)
         {

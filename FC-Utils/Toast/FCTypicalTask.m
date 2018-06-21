@@ -29,7 +29,7 @@
 
 - (id)doInBackground
 {
-    [NSException raise:NSInternalInconsistencyException format:@"You must override %@ in a subclass", NSStringFromSelector(_cmd)];
+    [NSException raise:NSGenericException format:@"You must override %@ in a subclass", NSStringFromSelector(_cmd)];
     return nil;
 }
 

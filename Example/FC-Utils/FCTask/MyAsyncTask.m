@@ -17,7 +17,7 @@
 {
     if(_testException)
     {
-        [FCTaskException raise:NSInternalInconsistencyException format:@"[%@] raise.", NSStringFromSelector(_cmd)];
+        [FCTaskException fc_raise:@"[%@] raise.", NSStringFromSelector(_cmd)];
     }
     
     LoggerApp(3, @"doInBackground");
