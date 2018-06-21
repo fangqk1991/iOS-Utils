@@ -13,6 +13,7 @@
 @property (nonatomic, strong) NSString *hint;
 
 - (instancetype)initWithView:(UIView *)view;
+- (void)onProgressUpdateHint:(NSString *)hint;
 - (void)onProgressUpdateCurrent:(NSUInteger)current total:(NSUInteger)total;
 
 @end

@@ -54,6 +54,13 @@
     self.view = nil;
 }
 
+- (void)onProgressUpdateHint:(NSString *)hint
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.hud.detailsLabel.text = hint;
+    });
+}
+
 - (void)onProgressUpdateCurrent:(NSUInteger)current total:(NSUInteger)total
 {
     NSString *hint = _hint;

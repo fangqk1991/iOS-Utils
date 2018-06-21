@@ -20,6 +20,9 @@
         sleep(1);
     }
     
+    [self onProgressUpdateHint:@"即将完成."];
+    sleep(1);
+    
     return nil;
 }
 
