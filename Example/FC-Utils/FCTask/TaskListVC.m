@@ -11,6 +11,7 @@
 #import "NSLogger.h"
 #import "MBProgressHUD.h"
 #import "MyAsyncTask.h"
+#import "FCToast.h"
 
 @interface TaskListVC ()
 
@@ -68,12 +69,19 @@
     };
     task.doInBackgroundBlock = ^id(FCAsyncTask *_self) {
         LoggerApp(3, @"doInBackgroundBlock");
+        
+//        [FCTaskException raise:NSInternalInconsistencyException format:@"[%@] raise.", NSStringFromSelector(_cmd)];
+
         for(int i = 0; i < 10; ++i)
         {
             [_self updateProgress:i total:10];
             sleep(1);
         }
         return nil;
+    };
+    task.onFailureBlock = ^(FCTaskException *exception) {
+        [hud hideAnimated:YES];
+        [FCToast toastInVC:self message:exception.reason];
     };
     task.onPostExecuteBlock = ^(id result) {
         [hud hideAnimated:YES];

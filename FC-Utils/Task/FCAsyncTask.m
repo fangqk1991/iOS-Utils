@@ -58,12 +58,30 @@
         }
     });
     
-    id result = self.doInBackgroundBlock(self);
+    id result = nil;
+    FCTaskException *exception = nil;
+    
+    @try {
+        result = self.doInBackgroundBlock(self);
+    } @catch (FCTaskException *e) {
+        exception = e;
+    }
     
     dispatch_async(dispatch_get_main_queue(), ^{
-        if(self.onPostExecuteBlock)
+        
+        if(exception)
         {
-            self.onPostExecuteBlock(result);
+            if(self.onFailureBlock)
+            {
+                self.onFailureBlock(exception);
+            }
+        }
+        else
+        {
+            if(self.onPostExecuteBlock)
+            {
+                self.onPostExecuteBlock(result);
+            }
         }
     });
 }
