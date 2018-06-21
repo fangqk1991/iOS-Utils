@@ -6,12 +6,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "FCTaskException.h"
 
 @interface FCAsyncTask2 : NSOperation
 
+- (void)onPreExecute;
 - (id)doInBackground;
 - (void)onPostExecute:(id)result;
-- (void)onPreExecute;
+- (void)onFailure:(FCTaskException *)exception;
 
 - (void)execute;
 

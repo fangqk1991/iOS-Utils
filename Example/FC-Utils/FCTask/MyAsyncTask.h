@@ -10,4 +10,6 @@
 
 @interface MyAsyncTask : FCTypicalTask
 
+@property (nonatomic) BOOL testException;
+
 @end

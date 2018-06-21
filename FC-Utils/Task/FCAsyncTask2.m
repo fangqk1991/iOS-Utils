@@ -19,6 +19,10 @@
     return self;
 }
 
+- (void)onPreExecute
+{
+}
+
 - (id)doInBackground
 {
     [NSException raise:NSInternalInconsistencyException format:@"You must override %@ in a subclass", NSStringFromSelector(_cmd)];
@@ -29,7 +33,7 @@
 {
 }
 
-- (void)onPreExecute
+- (void)onFailure:(FCTaskException *)exception
 {
 }
 
@@ -55,10 +59,25 @@
         [self onPreExecute];
     });
     
-    id result = [self doInBackground];
+    id result = nil;
+    FCTaskException *exception = nil;
+    
+    @try {
+        result = [self doInBackground];
+    } @catch (FCTaskException *e) {
+        exception = e;
+    }
     
     dispatch_async(dispatch_get_main_queue(), ^{
-        [self onPostExecute:result];
+        
+        if(exception)
+        {
+            [self onFailure:exception];
+        }
+        else
+        {
+            [self onPostExecute:result];
+        }
     });
 }
 

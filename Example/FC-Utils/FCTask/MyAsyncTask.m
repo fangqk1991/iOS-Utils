@@ -8,11 +8,18 @@
 
 #import "MyAsyncTask.h"
 #import "NSLogger.h"
+#import "FCTaskException.h"
+#import "FCToast.h"
 
 @implementation MyAsyncTask
 
 - (id)doInBackground
 {
+    if(_testException)
+    {
+        [FCTaskException raise:NSInternalInconsistencyException format:@"[%@] raise.", NSStringFromSelector(_cmd)];
+    }
+    
     LoggerApp(3, @"doInBackground");
     for(int i = 0; i < 10; ++i)
     {
@@ -24,6 +31,12 @@
     sleep(1);
     
     return nil;
+}
+
+- (void)onFailure:(FCTaskException *)exception
+{
+    [super onFailure:exception];
+    [FCToast toast:exception.reason];
 }
 
 @end

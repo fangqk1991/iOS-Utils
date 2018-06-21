@@ -38,6 +38,11 @@
     [_hud hideAnimated:YES];
 }
 
+- (void)onFailure:(FCTaskException *)exception
+{
+    [_hud hideAnimated:YES];
+}
+
 - (void)onPreExecute
 {
     UIView *view = _view;

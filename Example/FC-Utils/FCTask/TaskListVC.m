@@ -40,6 +40,13 @@
                                    [weakSelf typicalTask];
                                }
                            },
+                       @{
+                           @"text": @"Task - Exception",
+                           @"event":
+                               ^{
+                                   [weakSelf testException];
+                               }
+                           },
                        ],
                    ];
 }
@@ -78,6 +85,13 @@
 {
     MyAsyncTask *task = [[MyAsyncTask alloc] initWithView:self.view];
     task.hint = @"请等待";
+    [task execute];
+}
+
+- (void)testException
+{
+    MyAsyncTask *task = [[MyAsyncTask alloc] initWithView:self.view];
+    task.testException = YES;
     [task execute];
 }
 
