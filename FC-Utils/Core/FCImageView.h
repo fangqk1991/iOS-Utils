@@ -9,6 +9,4 @@
 
 @interface FCImageView : UIImageView
 
-@property (nonatomic, copy) void (^onClick)(FCImageView *sender);
-
 @end

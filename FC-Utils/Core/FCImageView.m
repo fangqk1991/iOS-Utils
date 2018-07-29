@@ -14,8 +14,7 @@ IB_DESIGNABLE
 @property (nonatomic) IBInspectable UIColor *circleBorderColor;
 @property (nonatomic) IBInspectable NSUInteger circleBorderWidth;
 
-
-
+@property (nonatomic, copy) void (^onClick)(FCImageView *sender);
 @property (nonatomic) IBInspectable NSUInteger cornerRadius;
 
 @end
@@ -83,8 +82,13 @@ IB_DESIGNABLE
         }
     });
     
-    self.userInteractionEnabled = YES;
     [self addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onTap:)]];
+}
+
+- (void)setOnClick:(void (^)(FCImageView *))onClick
+{
+    self.userInteractionEnabled = YES;
+    _onClick = [onClick copy];
 }
 
 - (void)onTap:(UITapGestureRecognizer *)recognizer
