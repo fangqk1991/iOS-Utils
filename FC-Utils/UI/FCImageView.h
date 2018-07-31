@@ -9,6 +9,6 @@
 
 @interface FCImageView : UIImageView
 
-- (void)setOnClick:(void (^)(FCImageView *))onClick;
+- (void)setOnClick:(void (^)(FCImageView *sender))onClick;
 
 @end

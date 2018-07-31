@@ -16,6 +16,7 @@
 #import "UIColor+Extensions.h"
 #import "FileHelperVC.h"
 #import "FCPhotoPicker.h"
+#import "FCViewVC.h"
 
 @interface MasterViewController()
 
@@ -69,6 +70,11 @@
                        @"text": @"FCPhotoPicker",
                        @"icon": [[UIColor orangeColor] createImageWithSize:CGSizeMake(5, 5)],
                        @"event": ^{ [weakSelf exampleForFCPhotoPicker]; }
+                       },
+                   @{
+                       @"text": @"FCView",
+                       @"icon": [[UIColor orangeColor] createImageWithSize:CGSizeMake(5, 5)],
+                       @"event": ^{ [FCViewVC fc_pushToNavigation:weakSelf.navigationController]; }
                        },
                    ],
                ];

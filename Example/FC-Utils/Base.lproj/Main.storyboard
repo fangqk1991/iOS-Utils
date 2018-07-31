@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="pev-Vr-rHS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pev-Vr-rHS">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
+        <deployment version="2304" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -29,10 +30,6 @@
         <scene sceneID="Rgf-jx-sU7">
             <objects>
                 <viewController storyboardIdentifier="sb_Master_FCVC" title="Master_FCVC" id="2AA-jq-yj1" customClass="Master_FCVC" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Tip-25-Ed3"/>
-                        <viewControllerLayoutGuide type="bottom" id="CBO-08-FrZ"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="4HG-5Q-DCh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -48,11 +45,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="5y7-D4-gn4" firstAttribute="leading" secondItem="4HG-5Q-DCh" secondAttribute="leading" id="ArE-bx-pFQ"/>
-                            <constraint firstAttribute="trailing" secondItem="5y7-D4-gn4" secondAttribute="trailing" id="BMC-f7-eoH"/>
+                            <constraint firstItem="5y7-D4-gn4" firstAttribute="leading" secondItem="gRT-WN-XkL" secondAttribute="leading" id="ArE-bx-pFQ"/>
+                            <constraint firstItem="gRT-WN-XkL" firstAttribute="trailing" secondItem="5y7-D4-gn4" secondAttribute="trailing" id="BMC-f7-eoH"/>
                             <constraint firstItem="5y7-D4-gn4" firstAttribute="top" secondItem="4HG-5Q-DCh" secondAttribute="top" id="JP5-0v-cnh"/>
                             <constraint firstAttribute="bottom" secondItem="5y7-D4-gn4" secondAttribute="bottom" id="rpc-gV-kCg"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="gRT-WN-XkL"/>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="5y7-D4-gn4" id="vJr-H5-aP3"/>
@@ -105,6 +103,7 @@
                         <segue destination="W8t-Wf-IkA" kind="show" id="is0-qn-SSl"/>
                         <segue destination="fG7-P1-l97" kind="show" id="jrC-Ms-9u6"/>
                         <segue destination="5fc-Ct-deG" kind="show" id="tuc-Sm-tdL"/>
+                        <segue destination="j4e-DF-Tdv" kind="show" id="DME-dF-7kK"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u4W-hS-ITA" sceneMemberID="firstResponder"/>
@@ -115,10 +114,6 @@
         <scene sceneID="Q5j-Pe-62A">
             <objects>
                 <viewController storyboardIdentifier="sb_DialogListVC" title="DialogListVC" id="xP3-Hq-kcR" customClass="DialogListVC" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="2SN-DP-ytB"/>
-                        <viewControllerLayoutGuide type="bottom" id="bvH-dB-d6i"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Mue-KC-SSs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -135,10 +130,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="PHL-V4-Vxr" firstAttribute="top" secondItem="Mue-KC-SSs" secondAttribute="top" id="RSo-ez-0RF"/>
-                            <constraint firstAttribute="trailing" secondItem="PHL-V4-Vxr" secondAttribute="trailing" id="dKg-qg-Rcc"/>
-                            <constraint firstItem="PHL-V4-Vxr" firstAttribute="leading" secondItem="Mue-KC-SSs" secondAttribute="leading" id="jIn-P3-q2t"/>
+                            <constraint firstItem="uxM-oL-8Tm" firstAttribute="trailing" secondItem="PHL-V4-Vxr" secondAttribute="trailing" id="dKg-qg-Rcc"/>
+                            <constraint firstItem="PHL-V4-Vxr" firstAttribute="leading" secondItem="uxM-oL-8Tm" secondAttribute="leading" id="jIn-P3-q2t"/>
                             <constraint firstAttribute="bottom" secondItem="PHL-V4-Vxr" secondAttribute="bottom" id="xYB-iR-Cwo"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="uxM-oL-8Tm"/>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="PHL-V4-Vxr" id="orb-jg-hLV"/>
@@ -180,10 +176,6 @@
         <scene sceneID="Hng-re-yE4">
             <objects>
                 <viewController storyboardIdentifier="sb_FCInputGroupVC" id="W8t-Wf-IkA" customClass="FCInputGroupVC" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="lmd-h8-hZy"/>
-                        <viewControllerLayoutGuide type="bottom" id="Etx-RT-xjQ"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ane-Vk-AI6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -230,10 +222,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="QP2-BT-wsj" secondAttribute="trailing" constant="20" id="D37-q6-XB0"/>
+                            <constraint firstItem="la6-yK-6fu" firstAttribute="trailing" secondItem="QP2-BT-wsj" secondAttribute="trailing" constant="20" id="D37-q6-XB0"/>
                             <constraint firstItem="QP2-BT-wsj" firstAttribute="top" secondItem="ane-Vk-AI6" secondAttribute="top" constant="20" id="XY3-oL-Ckg"/>
-                            <constraint firstItem="QP2-BT-wsj" firstAttribute="leading" secondItem="ane-Vk-AI6" secondAttribute="leading" constant="20" id="jqN-kU-nPZ"/>
+                            <constraint firstItem="QP2-BT-wsj" firstAttribute="leading" secondItem="la6-yK-6fu" secondAttribute="leading" constant="20" id="jqN-kU-nPZ"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="la6-yK-6fu"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <connections>
@@ -330,6 +323,44 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u6J-Um-oGC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="527" y="-1320"/>
+        </scene>
+        <!--FCView-->
+        <scene sceneID="IJE-lQ-NhA">
+            <objects>
+                <viewController storyboardIdentifier="sb_FCViewVC" title="FCView" id="j4e-DF-Tdv" customClass="FCViewVC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GzB-XA-zhg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pg8-HD-7bR" customClass="FCView">
+                                <rect key="frame" x="20" y="84" width="335" height="80"/>
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.81568627449999997" blue="0.76862745099999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="rZL-lH-KU8"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.12941176469999999" green="0.85098039219999999" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hasRightBorder" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kww-Je-NRe" firstAttribute="trailing" secondItem="pg8-HD-7bR" secondAttribute="trailing" constant="20" id="YBP-ZI-1Me"/>
+                            <constraint firstItem="kww-Je-NRe" firstAttribute="top" secondItem="pg8-HD-7bR" secondAttribute="top" constant="-20" id="jzH-Pg-ypC"/>
+                            <constraint firstItem="pg8-HD-7bR" firstAttribute="leading" secondItem="kww-Je-NRe" secondAttribute="leading" constant="20" id="lIl-77-690"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kww-Je-NRe"/>
+                    </view>
+                    <connections>
+                        <outlet property="myView" destination="pg8-HD-7bR" id="sej-ws-U4p"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dMF-To-4a2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2633" y="-592"/>
         </scene>
     </scenes>
 </document>

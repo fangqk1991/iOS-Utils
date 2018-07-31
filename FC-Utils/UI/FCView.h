@@ -7,8 +7,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FCView : UIImageView
+@interface FCView : UIView
 
-- (void)setOnClick:(void (^)(FCView *))onClick;
+- (void)setOnClick:(void (^)(FCView *sender))onClick;
 
 @end

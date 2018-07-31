@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2FD7BC21F3679EC6AA0A88D9 /* FCViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD7B9B58F932905E06CEE0A /* FCViewVC.m */; };
 		3262E32820B471160094EC5C /* ToastListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3262E32720B471160094EC5C /* ToastListVC.m */; };
 		3277B71320B52881005B879B /* TaskListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3277B71220B52881005B879B /* TaskListVC.m */; };
 		3277B71E20B5528D005B879B /* MyAsyncTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 3277B71D20B5528D005B879B /* MyAsyncTask.m */; };
@@ -34,6 +35,8 @@
 		05978E0FEF3D9295C5ACF2A0 /* Pods-FC-Utils_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FC-Utils_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FC-Utils_Example/Pods-FC-Utils_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		1EE7993A45205BB15CD627B9 /* libPods-FC-Utils_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FC-Utils_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22C06848940352274B59CF83 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		2FD7B9B58F932905E06CEE0A /* FCViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCViewVC.m; sourceTree = "<group>"; };
+		2FD7BE081847794B27BD8A56 /* FCViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCViewVC.h; sourceTree = "<group>"; };
 		3262E32620B471160094EC5C /* ToastListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToastListVC.h; sourceTree = "<group>"; };
 		3262E32720B471160094EC5C /* ToastListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToastListVC.m; sourceTree = "<group>"; };
 		3277B71120B52881005B879B /* TaskListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaskListVC.h; sourceTree = "<group>"; };
@@ -113,6 +116,15 @@
 				329351A220A88F0E00C3E9AD /* DialogListVC.m */,
 			);
 			path = FCDialog;
+			sourceTree = "<group>";
+		};
+		2FD7BC059D3A0ADDA7C93B65 /* FCView */ = {
+			isa = PBXGroup;
+			children = (
+				2FD7BE081847794B27BD8A56 /* FCViewVC.h */,
+				2FD7B9B58F932905E06CEE0A /* FCViewVC.m */,
+			);
+			path = FCView;
 			sourceTree = "<group>";
 		};
 		3262E32220B470C20094EC5C /* FCToast */ = {
@@ -211,6 +223,7 @@
 				32D72CE720CB8E3C004E5553 /* FCInputGroup */,
 				32B89AB220CC10BD003A84E8 /* FCDownCounter */,
 				32B89AE020CD1572003A84E8 /* FCFileHelper */,
+				2FD7BC059D3A0ADDA7C93B65 /* FCView */,
 			);
 			name = "Example for FC-Utils";
 			path = "FC-Utils";
@@ -374,6 +387,7 @@
 				3262E32820B471160094EC5C /* ToastListVC.m in Sources */,
 				32B89AE320CD159B003A84E8 /* FileHelperVC.m in Sources */,
 				3277B71320B52881005B879B /* TaskListVC.m in Sources */,
+				2FD7BC21F3679EC6AA0A88D9 /* FCViewVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

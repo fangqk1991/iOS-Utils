@@ -82,7 +82,7 @@ IB_DESIGNABLE
     [self addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onTap:)]];
 }
 
-- (void)setOnClick:(void (^)(FCView *))onClick
+- (void)setOnClick:(void (^)(FCView *sender))onClick
 {
     self.userInteractionEnabled = YES;
     _onClick = [onClick copy];
