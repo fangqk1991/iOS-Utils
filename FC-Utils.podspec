@@ -35,10 +35,18 @@ TODO: Add long description of the pod here.
   s.subspec 'Core' do |core|
 
     core.dependency 'FC-Utils/Task'
+    core.dependency 'FC-Utils/UI'
     core.dependency 'FC-Utils/Extensions'
     core.dependency 'FC-Utils/Media'
     core.source_files = 'FC-Utils/Core/*.{h,m}'
     core.public_header_files = 'FC-Utils/Core/*.h'
+
+  end
+
+  s.subspec 'UI' do |ui|
+
+    ui.source_files = 'FC-Utils/UI/*.{h,m}'
+    ui.public_header_files = 'FC-Utils/UI/*.h'
 
   end
 
