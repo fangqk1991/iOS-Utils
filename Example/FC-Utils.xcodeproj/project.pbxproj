@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2FD7B7C02EA25F7CE1254A1F /* ExtensionsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD7BF2A47510ED850AF679E /* ExtensionsVC.m */; };
 		2FD7BC21F3679EC6AA0A88D9 /* FCViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD7B9B58F932905E06CEE0A /* FCViewVC.m */; };
 		3262E32820B471160094EC5C /* ToastListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3262E32720B471160094EC5C /* ToastListVC.m */; };
 		3277B71320B52881005B879B /* TaskListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3277B71220B52881005B879B /* TaskListVC.m */; };
@@ -37,6 +38,8 @@
 		22C06848940352274B59CF83 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		2FD7B9B58F932905E06CEE0A /* FCViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCViewVC.m; sourceTree = "<group>"; };
 		2FD7BE081847794B27BD8A56 /* FCViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCViewVC.h; sourceTree = "<group>"; };
+		2FD7BF25CAD6E35C92F78548 /* ExtensionsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtensionsVC.h; sourceTree = "<group>"; };
+		2FD7BF2A47510ED850AF679E /* ExtensionsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtensionsVC.m; sourceTree = "<group>"; };
 		3262E32620B471160094EC5C /* ToastListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToastListVC.h; sourceTree = "<group>"; };
 		3262E32720B471160094EC5C /* ToastListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToastListVC.m; sourceTree = "<group>"; };
 		3277B71120B52881005B879B /* TaskListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaskListVC.h; sourceTree = "<group>"; };
@@ -125,6 +128,15 @@
 				2FD7B9B58F932905E06CEE0A /* FCViewVC.m */,
 			);
 			path = FCView;
+			sourceTree = "<group>";
+		};
+		2FD7BC943C66A8F621341C7B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2FD7BF25CAD6E35C92F78548 /* ExtensionsVC.h */,
+				2FD7BF2A47510ED850AF679E /* ExtensionsVC.m */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		3262E32220B470C20094EC5C /* FCToast */ = {
@@ -224,6 +236,7 @@
 				32B89AB220CC10BD003A84E8 /* FCDownCounter */,
 				32B89AE020CD1572003A84E8 /* FCFileHelper */,
 				2FD7BC059D3A0ADDA7C93B65 /* FCView */,
+				2FD7BC943C66A8F621341C7B /* Extensions */,
 			);
 			name = "Example for FC-Utils";
 			path = "FC-Utils";
@@ -388,6 +401,7 @@
 				32B89AE320CD159B003A84E8 /* FileHelperVC.m in Sources */,
 				3277B71320B52881005B879B /* TaskListVC.m in Sources */,
 				2FD7BC21F3679EC6AA0A88D9 /* FCViewVC.m in Sources */,
+				2FD7B7C02EA25F7CE1254A1F /* ExtensionsVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
