@@ -75,6 +75,8 @@ TODO: Add long description of the pod here.
 
   s.subspec 'Media' do |media|
 
+    media.dependency 'FC-Utils/Extensions'
+    
     media.source_files = 'FC-Utils/Media/*.{h,m}'
     media.public_header_files = 'FC-Utils/Media/*.h'
 
