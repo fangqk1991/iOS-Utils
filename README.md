@@ -21,10 +21,10 @@ FC-Utils 使用 [CocoaPods](https://cocoapods.org) 进行安装.
 target 'MyApp' do
     ...
 
-    pod 'FC-Utils', :git => 'https://github.com/fangqk1991/iOS-Utils.git'
+    pod 'FC-Utils', :git => 'https://github.com/fangqk1991/iOS-Utils.git', :tag => '0.1.0'
     
     # Use Toast
-    pod 'FC-Utils/Toast', :git => 'https://github.com/fangqk1991/iOS-Utils.git'
+    pod 'FC-Utils/Toast', :git => 'https://github.com/fangqk1991/iOS-Utils.git', :tag => '0.1.0'
 end
 ```
 
